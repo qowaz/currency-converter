@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Curreny Converter</title>
+    <style>
+      body {
+        background: #DDD6B2;}
+      .container {
+        background: #fff;
+        padding: 50px;
+        margin: 50px auto;
+        width: 400px;
+        font-family: sans-serif;
+        border-radius: 4px;
+      }
+      </style>
+      <script type="text/javascript">
+  function convert() {
+    var y = document.getElementById('money').value;
+    if (isNaN(y)) {
+        alert(y + " ist keine Zahl!");
+    } else {
+        var x = y * 1.3193;
+        document.getElementById('result').innerHTML = "You have " + x.toFixed(2) + " Dollars";
+    }
+  }
+</script>
+</head>
+<body>
+<div class="container">
+  <h1>Curreny Converter</h1>
+    Amount: <input id="money" type="text" name="amount">
+<button onclick="convert()">Convert</button>
+<h3 id="result"></h3>
+</div>
+</body>
+</html>
