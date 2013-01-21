@@ -49,16 +49,18 @@
   function convert() {
     var y = document.getElementById('money').value;
     if (isNaN(y)) {
-      document.getElementById('result').innerHTML = "";
+      resetElementById('result');
       document.getElementById('error').innerHTML = y + " is not a number!";
     } else {
-      document.getElementById('error').innerHTML = "";
+      resetElementById('error');
       var rate = 1.3315;
       var x = y * rate;
       document.getElementById('result').innerHTML = "You have " + x.toFixed(2) + " Dollars";
     }
-  }  
-  
+  }
+  function resetElementById(element) {
+    document.getElementById(element).innerHTML = "";
+  }
 </script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
